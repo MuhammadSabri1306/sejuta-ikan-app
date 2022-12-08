@@ -5,90 +5,14 @@
 @section('content')
     <section class="home-hero slide-hero">
         <div class="hero-owl owl-carousel">
-            <div class="slide owlbg11" data-background="{{ asset('app-assets/landing-new/images/svg/svg-bg1.svg') }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="hero-content-x">
-                                <p class="mb10 ree-tt">Selamat Datang di e-Sejutaikan</p>
-                                <h1 class="mb30" data-aos="fade-in" data-aos-delay="200">
-                                    <span class="ree-tt">Sertifikat Hasil Pengujian Produk Perikanan</span>
-                                </h1>
-                                <h4>UPT Balai Penerapan Mutu Produk Perikanan DKP Prov. SulSel</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="sol-image m-mt30">
-                                <img src="{{ asset('pimpinann-.png') }}" alt="PLT Gubernur" class="img-fluid"
-                                    data-aos="fade-in" data-aos-delay="400">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="slide owlbg11">
+                <img src="{{ asset('app-assets/landing-new/images/new_banner/banner1.png') }}" class="img-fluid">
             </div>
-
-            <div class="slide owlbg11" data-background="{{ asset('app-assets/landing-new/images/svg/svg-bg2.svg') }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="hero-content-x">
-                                <p class="mb10 ree-tt">Selamat Datang di e-Sejutaikan</p>
-                                <h1 class="mb30" data-aos="fade-in" data-aos-delay="200">
-                                    <span class="ree-tt">Sertifikat Hasil Pengujian Produk Perikanan</span>
-                                </h1>
-                                <h4>UPT Balai Penerapan Mutu Produk Perikanan DKP Prov. SulSel</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="sol-image m-mt30">
-                                <img src="{{ asset('pimpinann-.png') }}" alt="PLT Gubernur" class="img-fluid"
-                                    data-aos="fade-in" data-aos-delay="400">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="slide owlbg11">
+                <img src="{{ asset('app-assets/landing-new/images/new_banner/banner2.png') }}" class="img-fluid">
             </div>
-
-            <div class="slide owlbg11" data-background="{{ asset('app-assets/landing-new/images/svg/svg-bg3.svg') }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="hero-content-x">
-                                <p class="mb10 ree-tt">Selamat Datang di e-Sejutaikan</p>
-                                <h1 class="mb30" data-aos="fade-in" data-aos-delay="200"><span class="ree-tt">Sertifikat
-                                        Hasil Pengujian Produk Perikanan</span></h1>
-                                <h4>UPT Balai Penerapan Mutu Produk Perikanan DKP Prov. SulSel</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="sol-image m-mt30">
-                                <img src="{{ asset('pimpinann-.png') }}" alt="PLT Gubernur" class="img-fluid"
-                                    data-aos="fade-in" data-aos-delay="400">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide owlbg11" data-background="{{ asset('app-assets/landing-new/images/svg/svg-bg4.svg') }}">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="hero-content-x">
-                                <p class="mb10 ree-tt">Selamat Datang di e-Sejutaikan</p>
-                                <h1 class="mb30" data-aos="fade-in" data-aos-delay="200"><span class="ree-tt">Sertifikat
-                                        Hasil Pengujian Produk Perikanan</span></h1>
-                                <h4>UPT Balai Penerapan Mutu Produk Perikanan DKP Prov. SulSel</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 vcenter">
-                            <div class="sol-image m-mt30">
-                                <img src="{{ asset('pimpinann-.png') }}" alt="PLT Gubernur" class="img-fluid"
-                                    data-aos="fade-in" data-aos-delay="400">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="slide owlbg11">
+                <img src="{{ asset('app-assets/landing-new/images/new_banner/banner3.png') }}" class="img-fluid">
             </div>
         </div>
     </section>
@@ -129,50 +53,6 @@
                     </a>
                 </div>
                 {{-- end --}}
-                <!--<div class="col-lg-3 col-sm-6 mt30" data-aos="fade-up" data-aos-delay="400">-->
-                <!--    <div class="ree-card bhv-tt">-->
-                <!--        <div class="creative-img reebgb">-->
-                <!--            <img src="{{ asset('app-assets/landing-new/images/svg/appdesign.svg') }}" alt="Registrasi" class="img-fluid">-->
-                <!--        </div>-->
-                <!--        <div class="creative-cntnt">-->
-                <!--            <h4 class="mb15"><a href="{{ route('register') }}">Registrasi</a></h4>-->
-                <!--            <p style="font-size: 14px; line-height: 22px;">Silahkan melakukan registrasi untuk Permohonan Pengujian Sampel apabila sudah memiliki akun silahkan login </p>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--<div class="col-lg-3 col-sm-6 mt30" data-aos="fade-up" data-aos-delay="700">-->
-                <!--    <div class="ree-card bhv-tt">-->
-                <!--        <div class="creative-img reebgc">-->
-                <!--            <img src="{{ asset('app-assets/landing-new/images/svg/content.svg') }}" alt="Pantau Permohonan" class="img-fluid">-->
-                <!--        </div>-->
-                <!--        <div class="creative-cntnt">-->
-                <!--            <h4 class="mb15"><a href="{{ route('landing.pantau-permohonan') }}">Pantau Status Permohonan</a></h4>-->
-                <!--            <p style="font-size: 14px; line-height: 22px;">Pantau Status Permohonan dengan Efisien dan mudah tanpa bertemu langsung.</p>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--<div class="col-lg-3 col-sm-6 mt30" data-aos="fade-up" data-aos-delay="1000">-->
-                <!--    <div class="ree-card bhv-tt">-->
-                <!--        <div class="creative-img reebgd">-->
-                <!--            <img src="{{ asset('app-assets/landing-new/images/svg/stracture.svg') }}" alt="Alur Permohonan" class="img-fluid">-->
-                <!--        </div>-->
-                <!--        <div class="creative-cntnt">-->
-                <!--            <h4 class="mb15"><a href="{{ route('landing.alur-permohonan') }}">Alur Permohonan</a></h4>-->
-                <!--            <p style="font-size: 14px; line-height: 22px;">Alur Permohonan Pengujian Sampel UPT Balai Penerapan Mutu Produk Perikanan Prov. Sulawesi Selatan.</p>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--<div class="col-lg-3 col-sm-6 mt30" data-aos="fade-up" data-aos-delay="1000">-->
-                <!--    <div class="ree-card bhv-tt">-->
-                <!--        <div class="creative-img reebgd">-->
-                <!--            <img src="{{ asset('app-assets/landing-new/images/svg/solutions-vector-m.png') }}" alt="Hub CS" class="img-fluid">-->
-                <!--        </div>-->
-                <!--        <div class="creative-cntnt">-->
-                <!--            <h4 class="mb15"><a href="https://api.whatsapp.com/send?phone=+6281244962783&text=Assalamualaikum">Customer Service</a></h4>-->
-                <!--            <p style="font-size: 14px; line-height: 22px;">Customer Service yang ramah siap melayani anda dengan cepat ketika mengalami kendala terhadap sistem.</p>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
             </div>
         </div>
     </section>
@@ -186,69 +66,59 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt30">
-                <div class="col-md-2 col-sm-2">
+            <div class="row justify-content-center align-items-center mt30">
+                <div class="col-10 col-md-6 col-lg-4">
+                    <img src="{{ asset('app-assets/landing-new/images/QRCode_UPT_BPMPP.png') }}" alt="Payment" class="img-fluid" style="border: 4px solid #fff; background-color: #fff;" data-aos="fade-in"
+                        data-aos-delay="400">
                 </div>
-                <div class="col-md-8 col-sm-8 vcenter">
-                    <img src="{{ asset('kris.jpeg') }}" alt="Payment" class="img-fluid" data-aos="fade-in"
-                        data-aos-delay="400" style="margin-bottom:12px">
-                </div>
-                <div class="col-md-2 col-sm-2">
-                </div>
-                <div class="col-md-12 col-sm-12">
-                    <h5>Cara pembayaran Retribusi Pemakaian Barang / Peralatan Serta Bahan dan Sarana Laboratorium UPT.
-                        BPMPP (Biaya Pengujian) melalui :</h5><br>
-                    <h6>1. Rekening Bank Sulselbar Nomor: 13000167319 atas nama Kas Umum Daerah Provinsi Sulawesi Selatan
-                    </h6>
-                    <h6>2. Quick Response Code Indonesian Standar (QRIS) Bank Sulselbar</h6>
+                <div class="col-md-6 p-5">
+                    <h5>Cara pembayaran Retribusi Pemakaian Barang / Peralatan Serta Bahan dan Sarana Laboratorium UPT. BPMPP (Biaya Pengujian) melalui :</h5><br>
+                    <ol>
+                        <li class="mb-3">Rekening Bank Sulselbar Nomor: 13000167319 atas nama Kas Umum Daerah Provinsi Sulawesi Selatan.</li>
+                        <li>Quick Response Code Indonesian Standar (QRIS) Bank Sulselbar.</li>
+                    </ol>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="r-bg-x zup sec-pad pt-5 pb-5">
+    <section class="r-bg-x sec-pad">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="sec-heading text-center pera-block">
                         <h2>Parameter</h2>
                     </div>
-                    <div class="row mt30">
-                        <div class="col-md-12 col-sm-12">
-                            @if ($parameters->count() >= 1)
-                                <div class="table-responsive">
-                                    <table id="data_side" class="table table-striped" style="width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">No</th>
-                                                <th scope="col">Parameter</th>
-                                                <th scope="col">Harga</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-                            @else
-                                <div class="table-responsive">
-                                    <table class="table table-striped" style="width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">No</th>
-                                                <th scope="col">Parameter</th>
-                                                <th scope="col">Harga</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="3" class="text-center"><i class="text-danger">no data</i>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            @endif
-                        </div>
-                    </div>
                 </div>
+            </div>
+            <div class="table-responsive mt30">
+            @if ($parameters->count() >= 1)
+                <table id="data_side" class="table table-striped" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Parameter</th>
+                            <th scope="col">Harga</th>
+                        </tr>
+                    </thead>
+                </table>
+            @else
+                <table class="table table-striped" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Parameter</th>
+                            <th scope="col">Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" class="text-center"><i class="text-danger">no data</i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            @endif
             </div>
         </div>
     </section>
