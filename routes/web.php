@@ -26,6 +26,9 @@ Route::get('/', [LandingController::class, 'index'])->name('/');
 
 Route::get('tentang', [LandingController::class, 'tentang'])->name('landing.tentang');
 
+// parameter
+Route::get('/datatable-parameter', [LandingController::class, 'datatable_parameter'])->name('landing.datatable-parameter');
+
 // **
 // formulir permohonan pengujian
 Route::get('/permohonan-pengujian', [LandingController::class, 'permohonan_pengujian'])->name('landing.permohonan-pengujian');
@@ -184,7 +187,7 @@ Route::group(['middleware' => 'cs'], function () {
 
     // download sertifikat
     Route::get('/cs/cetak-sertifikat/{id}', [PermohonanController::class, 'cetak_sertifikat'])->name('cs.cetak-sertifikat');
-    
+
     // report
     Route::get('/cs/report', [CSController::class, 'report'])->name('cs.all.report');
     Route::get('/cs/datatable-report/{tahun?}/{bulan?}', [CSController::class, 'datatable_report'])->name('cs.datatable-all.report');
@@ -268,7 +271,7 @@ Route::group(['middleware' => 'pengujian'], function () {
     // handler pengujian dikembalikan
     Route::get('/pengujian/pengujian-dikembalikan', [PengujianController::class, 'pengujian_dikembalikan'])->name('pengujian.pengujian-dikembalikan');
     Route::get('/pengujian/pengujian-dikembalikan-datatable', [PengujianController::class, 'pengujian_dikembalikan_datatable'])->name('pengujian.pengujian-dikembalikan-datatable');
-    // 
+    //
     Route::get('/pengujian/edit-pengujian-dikembalikan/{id}', [PengujianController::class, 'edit_pengujian_dikembalikan'])->name('pengujian.edit-pengujian-dikembalikan');
     Route::put('/pengujian/edit-pengujian-dikembalikan-proses/{id}', [PengujianController::class, 'edit_pengujian_dikembalikan_proses'])->name('pengujian.edit-pengujian-dikembalikan-proses');
 

@@ -14,6 +14,7 @@ use App\Models\Responden;
 use App\Models\Sop;
 use App\Models\Survei;
 use App\Models\User;
+use App\Models\Parameter;
 use DataTables;
 use Hash;
 use Illuminate\Http\Request;
@@ -22,10 +23,30 @@ use Illuminate\Support\Str;
 
 class LandingController extends Controller {
     public function index() {
+        $parameters = Parameter::all();
         $beritas = Berita::latest()->get();
         return view('pages.landing.beranda', [
             'beritas' => $beritas,
+            'parameters' => $parameters
         ]);
+    }
+
+    public function datatable_parameter() {
+        $result = Parameter::where('aktif',1)->latest()->get();
+        $no     = 0;
+        foreach ($result as $value) {
+            $no++;
+            $row = [];
+
+            $row[] = $no;
+
+            $row[] = $value->parameter;
+
+            $row[] = "Rp. ".number_format($value->harga);
+
+            $data[] = $row;
+        }
+        return DataTables::of($data)->escapeColumns([])->make(true);
     }
 
     public function sop() {

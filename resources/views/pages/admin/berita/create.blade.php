@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.master')
 
-@section('title','Berita')
+@section('title', 'Kegiatan')
 
 @section('style')
     <script type="text/javascript" src="{{ asset('app-assets/dashboard/ckeditor/ckeditor.js') }}"></script>
@@ -13,15 +13,18 @@
                 <div class="iq-card">
                     <div class="iq-card-header d-flex justify-content-between">
                         <div class="iq-header-title">
-                            <h4 class="card-title">Berita</h4>
+                            <h4 class="card-title">Kegiatan</h4>
                         </div>
                     </div>
                     <div class="iq-card-body">
                         <form method="POST" action="{{ route('admin.berita.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="judul">Judul Berita <i class="text-danger" style="font-size: 16px;">*</i></label>
-                                <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul" id="exampleInputText1" placeholder="Judul" value="{{ old('judul') }}" autofocus>
+                                <label for="judul">Judul Kegiatan <i class="text-danger"
+                                        style="font-size: 16px;">*</i></label>
+                                <input type="text" class="form-control @error('judul') is-invalid @enderror"
+                                    name="judul" id="exampleInputText1" placeholder="Judul" value="{{ old('judul') }}"
+                                    autofocus>
                                 @error('judul')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -29,8 +32,9 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Isi Berita</label>
-                                <textarea class="ckeditor form-control ckeditor @error('isi') is-invalid @enderror" id="ckeditor" name="isi" rows="5"></textarea>
+                                <label for="exampleFormControlTextarea1">Isi Kegiatan</label>
+                                <textarea class="ckeditor form-control ckeditor @error('isi') is-invalid @enderror" id="ckeditor" name="isi"
+                                    rows="5"></textarea>
                                 @error('isi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -39,7 +43,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input @error('foto') is-invalid @enderror" id="customFile" name="foto" accept="image/*">
+                                    <input type="file" class="custom-file-input @error('foto') is-invalid @enderror"
+                                        id="customFile" name="foto" accept="image/*">
                                     <label class="custom-file-label" for="customFile">Foto</label>
                                 </div>
                                 @error('foto')
@@ -50,7 +55,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input @error('file') is-invalid @enderror" id="customFile" name="file" accept=".xlsx,.xls,.doc,.docx,.ppt,.pptx,.pdf">
+                                    <input type="file" class="custom-file-input @error('file') is-invalid @enderror"
+                                        id="customFile" name="file" accept=".xlsx,.xls,.doc,.docx,.ppt,.pptx,.pdf">
                                     <label class="custom-file-label" for="customFile">Upload Dokumen</label>
                                 </div>
                                 @error('lampiran')
@@ -61,7 +67,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="url_video">Url Video </label>
-                                <input type="url" class="form-control @error('url_video') is-invalid @enderror" name="url_video" id="exampleInputText1" value="{{ old('url_video') }}">
+                                <input type="url" class="form-control @error('url_video') is-invalid @enderror"
+                                    name="url_video" id="exampleInputText1" value="{{ old('url_video') }}">
                                 @error('url_video')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -81,4 +88,3 @@
 
 
 @endsection
-
