@@ -7,26 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SURAT KETETAPAN RETRIBUSI DAERAH</title>
-    <link rel="stylesheet" href="{{ public_path('app-assets/dashboard/css/bootstrap.min.css') }}">
     <style>
-        
-        .bg {
-            background-image: url('http://sejutaikan-bpmpp.info/public/logo.png');
-            height: 45%;
-            width: 350px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 0.3;
-            position: relative;
-            top: 250px;
-            left: 170px;
-        }
 
         .table {
             border-collapse: collapse;
             width: 100%;
-            position: normal;
         }
         
         .tr {
@@ -52,31 +37,48 @@
         	white-space: nowrap;
         }
 
-        .table th {
+        .table th:not(.text-end) {
         	text-align: center;
         }
 
-        .table thead th {
-        	font-size: 0.85rem;
+        .table th, .table td {
+        	padding: 4px;
         }
 
         .whitespace-nowrap {
         	white-space: nowrap;
         }
 
-        .text-lunas {
-        	color: #fff;
-        	font-size: 4rem;
-        	font-weight: bold;
-        	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        body, p, table, h1, h2, h3, h4, h5, h6 {
+        	font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p, table {
+        	font-size: 12px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+        	margin: 0;
+        }
+
+        .text-center {
+        	text-align: center;
+        }
+
+        .text-end {
+        	text-align: right;
+        }
+
+        .paraf {
+        	margin-left: 650px;
         }
     </style>
 </head>
 <body>
 	<header>
 		<div class="">
-			<h4 class="text-center mb-1">SURAT KETETAPAN RETRIBUSI DAERAH<br>PEMAKAIAN KEKAYAAN DAERAH<br>PADA UPT BALAI PENERAPAN MUTU PRODUK PERIKANAN</h4>
-			<h5 class="text-center font-weight-bold">DINAS KELAUTAN DAN PERIKANAN PROVINSI SULAWESI SELATAN</h5>
+			<h4 class="text-center">SURAT KETETAPAN RETRIBUSI DAERAH<br>PEMAKAIAN KEKAYAAN DAERAH<br>PADA UPT BALAI PENERAPAN MUTU PRODUK PERIKANAN</h4>
+			<h5 class="text-center"><b>DINAS KELAUTAN DAN PERIKANAN PROVINSI SULAWESI SELATAN</b></h5>
 			<hr>
 		</div>
 	</header>
@@ -110,7 +112,7 @@
 			</div>
 			<p>Untuk melakukan pembayaran retribusi Pemakaian Barang/Peralatan Serta Bahan Dan Sarana Laboratorium dengan data sebagai berikut :</p>
 			<div>
-				<table class="table table-bordered">
+				<table class="table" border="1">
 					<thead>
 						<tr>
 							<th>NO</th>
@@ -129,19 +131,19 @@
 					@foreach($permohonanParameters as $item)
 						@if($no === 1)
 							<tr>
-								<td rowspan="{{ count($permohonanParameters) }}">1</td>
-								<td rowspan="{{ count($permohonanParameters) }}">{{ $permohonan->jenis_sampel }}</td>
+								<td class="text-center" rowspan="{{ count($permohonanParameters) }}">1</td>
+								<td class="text-center" rowspan="{{ count($permohonanParameters) }}">{{ $permohonan->jenis_sampel }}</td>
 								<td>{{ $no . '. ' . $item->parameter->parameter }}</td>
-								<td>{{ $item->jumlah }}</td>
-								<td class="whitespace-nowrap">Rp {{ number_format($item->parameter->harga,0,',','.') }}</td>
-								<td class="whitespace-nowrap">Rp {{ number_format($item->parameter->harga * $item->jumlah,0,',','.') }}</td>
+								<td class="text-center">{{ $item->jumlah }}</td>
+								<td class="whitespace-nowrap text-end">Rp {{ number_format($item->parameter->harga,0,',','.') }}</td>
+								<td class="whitespace-nowrap text-end">Rp {{ number_format($item->parameter->harga * $item->jumlah,0,',','.') }}</td>
 							</tr>
 						@else
 							<tr>
 								<td>{{ $no . '. ' . $item->parameter->parameter }}</td>
-								<td>{{ $item->jumlah }}</td>
-								<td class="whitespace-nowrap">Rp {{ number_format($item->parameter->harga,0,',','.') }}</td>
-								<td class="whitespace-nowrap">Rp {{ number_format($item->parameter->harga * $item->jumlah,0,',','.') }}</td>
+								<td class="text-center">{{ $item->jumlah }}</td>
+								<td class="whitespace-nowrap text-end">Rp {{ number_format($item->parameter->harga,0,',','.') }}</td>
+								<td class="whitespace-nowrap text-end">Rp {{ number_format($item->parameter->harga * $item->jumlah,0,',','.') }}</td>
 							</tr>
 						@endif
 						@php
@@ -152,28 +154,19 @@
 					</tbody>
 					<tfoot>
 						<tr>
-							<th colspan="5" class="text-right">TOTAL</th>
-							<th class="whitespace-nowrap">Rp {{ number_format($totalPrice,0,',','.') }}</th>
+							<th colspan="5" class="text-end">TOTAL</th>
+							<th class="whitespace-nowrap text-end">Rp {{ number_format($totalPrice,0,',','.') }}</th>
 						</tr>
 					</tfoot>
 				</table>
 			</div>
 			<p>Pembayaran dapat dilakukan melalui RKUD Provinsi Sulawesi Selatan <b>(130-001-000006731-9)</b> atau melalui <b>QRIS</b>.</p>
-			<div class="d-flex justify-content-end px-5 mb-5">
-				<div>
-					<p class="mb-0">Makassar, ………………………. <small>(tgl pembayaran)</small></p>
-					<p class="mb-4">Petugas Pemungut</p>
-					<p class="mb-4">&nbsp;</p>
-					<p class="mb-0">(……………………………………….)</p>
-					<p>NIP</p>
-				</div>
+			<p class="paraf" style="margin-bottom: 40px;">Makassar, ………………………. <small>(tgl pembayaran)</small><br>Petugas Pemungut</p>
+			<p class="paraf" style="margin-bottom: 20px;">(……………………………………….)<br>NIP</p>
+			<div>
+				<p class="text-center"><img src="{{ public_path('pmt.png') }}" style="width: 400px;"></p>
 			</div>
-			<hr>
-			<p class="mb-0 text-center text-lunas">LUNAS</p>
-			<hr>
 		</div>
 	</main>
 </body>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 </html>

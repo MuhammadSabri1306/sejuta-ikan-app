@@ -289,7 +289,7 @@ class KeuanganController extends Controller {
             ]);*/
 
             $pdf = PDF::loadView('pages.keuangan.pembayaran.cetak-sk', compact('permohonan', 'permohonanParameters'))->setPaper('a4', 'landscape');
-            return $pdf->stream('sk_retribusi.pdf');
+            return $pdf->stream('sk_retribusi3.pdf');
         }
         
     }
