@@ -134,6 +134,8 @@ Route::group(['middleware' => 'admin'], function () {
     //
     Route::get('/admin/master-data/aktif-parameter/{id}', [ParameterController::class, 'aktif'])->name('admin.parameter.aktif');
     Route::post('/admin/master-data/proses-nonaktif-parameter', [ParameterController::class, 'proses_nonaktif'])->name('admin.parameter.proses-nonaktif');
+    // Download PDF
+    Route::get('/admin/master-data/parameter/download', [ParameterController::class, 'download'])->name('admin.parameter.download');
 
     // **
     // handler sop

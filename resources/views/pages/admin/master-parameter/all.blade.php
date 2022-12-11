@@ -30,8 +30,14 @@
                                         </span>
                                     @enderror
                                 </div>
-                                <button type="submit" class="btn btn-primary">Cari</button>
-                                <a href="{{ route('admin.parameter.all') }}" class="btn btn-danger">Reset</a>
+                                <div class="d-flex mb-5">
+                                    <button type="submit" class="btn btn-primary mr-2">Cari</button>
+                                    <a href="{{ route('admin.parameter.all') }}" class="btn btn-danger">Reset</a>
+                                </div>
+                                <div class="form-group">
+                                    <label class="d-block">Parameter tersedia</label>
+                                    <a target="_blank" href="{{ route('admin.parameter.download') }}" class="btn btn-block btn-success">Download Laporan</a>
+                                </div>
                             </form>
                         </div>
                     </div>

@@ -33,19 +33,18 @@ class LandingController extends Controller {
 
     public function datatable_parameter() {
         $result = Parameter::where('aktif',1)->latest()->get();
-        $no     = 0;
-        foreach ($result as $value) {
+        $data = [];
+        $no = 1;
+
+        foreach($result as $item) {
+            $jenisParameter = $item->jp->jenis_permohonan;
+            $parameter = $item->parameter;
+            $harga = number_format($item->harga, 0, ',', '.');
+
+            array_push($data, [ $no, $jenisParameter, $parameter, $harga ]);
             $no++;
-            $row = [];
-
-            $row[] = $no;
-
-            $row[] = $value->parameter;
-
-            $row[] = "Rp. ".number_format($value->harga);
-
-            $data[] = $row;
         }
+
         return DataTables::of($data)->escapeColumns([])->make(true);
     }
 
@@ -75,7 +74,7 @@ class LandingController extends Controller {
     }
 
     public function survei() {
-        return view('pages.landing.survei');
+        return view('pages.landing.survei', [ 'pertanyaan' => Pertanyaan::all() ]);
     }
 
     public function proses_survei(Request $request) {

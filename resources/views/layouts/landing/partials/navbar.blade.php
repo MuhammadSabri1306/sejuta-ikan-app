@@ -26,8 +26,11 @@
 	            		<a href="{{ route('landing.tentang') }}" class="menu-links">Tentang</a>
 	            	</li>
 	            	<li class="megamenu mega-small">
-	            		<a href="{{ route('landing.sop') }}"  class="menu-links">Sop</a>
+	            		<a href="{{ route('landing.sop') }}" class="menu-links">Sop</a>
 	            	</li>
+	            	<li>
+                        <a href="#" class="menu-links">Kegiatan</a>
+                    </li>
 	            	<li class="megamenu mega-small">
 	            		<a href="{{ route('landing.pengumuman') }}"  class="menu-links">Pengumuman</a>
 	            	</li>
@@ -67,6 +70,9 @@
                     </li>
                     <li>
                         <a href="{{ route('landing.pengumuman') }}">Pengumuman</a>
+                    </li>
+                    <li>
+                        <a href="#">Kegiatan</a>
                     </li>
                     <li>
                         <a href="{{ route('landing.pengaduan') }}">Pengaduan</a>

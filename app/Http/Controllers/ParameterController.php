@@ -7,6 +7,7 @@ use App\Models\Parameter;
 use Auth;
 use DataTables;
 use Illuminate\Http\Request;
+use PDF;
 
 class ParameterController extends Controller {
     public function index(Request $request) {
@@ -167,5 +168,14 @@ class ParameterController extends Controller {
         } else {
             return redirect()->back()->with('error', 'Aktifkan Parameter Gagal');
         }
+    }
+
+    public function download() {
+        $parameters = Parameter::orderBy('id', 'DESC')->where('aktif', '=', 1)->get();
+        // return view('pages.admin.master-parameter.report', [ 'parameter' => $parameters ]);
+        
+        $pdf = PDF::loadView('pages.admin.master-parameter.report', [ 'parameter' => $parameters ]);
+        $pdf->setPaper('a4', 'portrait');
+        return $pdf->stream('laporan_parameter_tersedia.pdf');
     }
 }

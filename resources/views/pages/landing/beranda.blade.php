@@ -57,7 +57,7 @@
         </div>
     </section>
 
-    <section class="r-bg-i sec-pad digi-service" style="padding-top: 0;">
+    <section class="r-bg-i sec-pad" style="padding-top: 0;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -87,7 +87,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="sec-heading text-center pera-block">
-                        <h2>Parameter</h2>
+                        <h2>Parameter Tersedia</h2>
                     </div>
                 </div>
             </div>
@@ -97,6 +97,7 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
+                            <th scope="col">Jenis Pengujian</th>
                             <th scope="col">Parameter</th>
                             <th scope="col">Harga</th>
                         </tr>
@@ -107,6 +108,7 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
+                            <th scope="col">Jenis Pengujian</th>
                             <th scope="col">Parameter</th>
                             <th scope="col">Harga</th>
                         </tr>

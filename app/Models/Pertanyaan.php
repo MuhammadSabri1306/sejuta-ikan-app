@@ -11,4 +11,8 @@ class Pertanyaan extends Model {
     protected $fillable = [
         'pertanyaan',
     ];
+
+    public function options() {
+        return $this->hasMany(Optionkuisioners::class, 'pertanyaan_id');
+    }
 }

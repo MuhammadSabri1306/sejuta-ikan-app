@@ -11,4 +11,8 @@ class Parameter extends Model {
     protected $fillable = [
         'jp_id', 'parameter', 'harga', 'nomor', 'aktif', 'pesan',
     ];
+
+    public function Jp() {
+        return $this->belongsTo(Jp::class);
+    }
 }
