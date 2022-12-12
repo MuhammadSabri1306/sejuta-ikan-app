@@ -73,6 +73,33 @@ class LandingController extends Controller {
         ]);
     }
 
+    public function kegiatan() {
+        $beritas = Berita::latest()->get();
+        return view('pages.landing.kegiatan.all', [
+            'kegiatanList' => $beritas,
+        ]);
+    }
+
+    public function kegiatan_detail($slug) {
+        $beritas = Berita::latest()->limit(4)->get();
+        $berita  = Berita::where('slug_judul', '=', $slug)->first();
+        $youtubeId = null;
+
+        if($berita->url_video) {
+            preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $berita->url_video, $matches);
+            
+            if(!empty($matches)) {
+                $youtubeId = $matches[0];
+            }
+        }
+
+        return view('pages.landing.kegiatan.detail', [
+            'kegiatan'  => $berita,
+            'kegiatanList' => $beritas,
+            'youtubeId' => $youtubeId
+        ]);
+    }
+
     public function survei() {
         return view('pages.landing.survei', [ 'pertanyaan' => Pertanyaan::all() ]);
     }

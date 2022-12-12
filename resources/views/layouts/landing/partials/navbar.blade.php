@@ -29,7 +29,7 @@
 	            		<a href="{{ route('landing.sop') }}" class="menu-links">Sop</a>
 	            	</li>
 	            	<li>
-                        <a href="#" class="menu-links">Kegiatan</a>
+                        <a href="{{ route('landing.kegiatan') }}" class="menu-links">Kegiatan</a>
                     </li>
 	            	<li class="megamenu mega-small">
 	            		<a href="{{ route('landing.pengumuman') }}"  class="menu-links">Pengumuman</a>

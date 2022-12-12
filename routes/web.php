@@ -55,6 +55,11 @@ Route::get('/berita', [LandingController::class, 'berita'])->name('landing.berit
 Route::get('/berita/{slug}', [LandingController::class, 'berita_detail'])->name('landing.detail.berita');
 
 // **
+// kegiatan
+Route::get('/kegiatan', [LandingController::class, 'kegiatan'])->name('landing.kegiatan');
+Route::get('/kegiatan/{slug}', [LandingController::class, 'kegiatan_detail'])->name('landing.detail.kegiatan');
+
+// **
 // register post
 Route::post('/proses-registrasi', [LandingController::class, 'proses_registrasi'])->name('landing.proses-registrasi');
 
