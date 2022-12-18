@@ -142,12 +142,12 @@
 	                @foreach($pertanyaan as $item)
 		                <tr>
 		                	<td>
-		                		<label class="ml-4 mb-2" style="text-indent: -1em;">{{ $no++ }}. {{ $item->pertanyaan }}</label>
+		                		<label class="ml-4 mb-2" style="text-indent: -1em;">{{ $no }}. {{ $item->pertanyaan }}</label>
 		                		<div class="px-4 pt-3 pb-4 d-flex flex-wrap">
 		            			@foreach($item->options as $opt)
 		            				<div class="form-check form-check-inline mb-2">
-							            <input class="form-check-input" name="jawab_{{ $no }}" type="radio" value="Perempuan" id="jawab{{ $no }}" required="required">
-							            <label class="form-check-label" for="jawab{{ $no }}">
+							            <input class="form-check-input" name="jawab_{{ $no }}" type="radio" value="{{ $opt->id }}" id="jawab{{ $no.$opt->id }}" required="required">
+							            <label class="form-check-label" for="jawab{{ $no.$opt->id }}">
 							            	<small>{{ $opt->option }}</small>
 							            </label>
 							        </div>
@@ -155,6 +155,9 @@
 		                		</div>
 		                    </td>
 		                </tr>
+		                @php
+					    	$no++;
+					    @endphp
 					@endforeach
     				</table>
 					<div class="d-flex align-items-center mx-md-5 mt-4">

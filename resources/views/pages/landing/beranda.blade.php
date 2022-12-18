@@ -195,10 +195,6 @@
                     <img src="{{ asset('app-assets/landing/assets/images/prosedur.jpeg') }}" alt="sop"
                         style="filter: drop-shadow(10px 10px 4px #777777); width: 100%;">
                 </div>
-                <div class="col-md-6 col-12">
-                    <img src="{{ asset('baru.jpeg') }}" alt="sop"
-                        style="filter: drop-shadow(10px 10px 4px #777777); width: 100%;">
-                </div>
             </div>
         </div>
     </section>

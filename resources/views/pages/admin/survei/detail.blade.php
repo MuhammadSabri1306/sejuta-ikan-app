@@ -64,7 +64,7 @@
                                                             ])->first();
                                                             $jawab = App\Models\Optionkuisioners::where('id','=',$hasil->jawaban)->first();
                                                             @endphp
-                                                            {{ $jawab->option }}
+                                                            {{ $jawab ? $jawab->option : '' }}
                                                         </td>
                                                     </tr>
                                                     @php

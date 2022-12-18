@@ -35,9 +35,9 @@ class BeritaController extends Controller {
 
             $row[] = ucwords($value->judul);
 
-            $row[] = '<a href="' . route('admin.berita.edit', ['id' => $value->id]) . '" title="Edit" class="btn btn-sm btn-primary" style="filter: drop-shadow(3px 10px 4px black);"><i class="ti-pencil-alt"></i> edit</a>&nbsp;
+            $row[] = '<div class="d-flex align-items-center"><a href="' . route('admin.berita.edit', ['id' => $value->id]) . '" title="Edit" class="btn btn-sm btn-primary mr-2" style="filter: drop-shadow(3px 10px 4px black);"><i class="ti-pencil-alt"></i> edit</a>&nbsp;
                 <a href="javascript:void" onclick="delData(' . $value->id . ')" style="filter: drop-shadow(3px 10px 4px black);" title="Delete" class="btn btn-sm btn-danger"><i class="ti-trash"></i>hapus</a>
-                ';
+                </div>';
             $data[] = $row;
         }
         return DataTables::of($data)->escapeColumns([])->make(true);

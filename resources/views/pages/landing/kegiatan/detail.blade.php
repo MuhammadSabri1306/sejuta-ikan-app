@@ -65,14 +65,16 @@
                     </div>
                 </div>
                 <div class="col-lg-4 wow left-animation" data-wow-delay="0.2s">
-                    <div class="blog-sidebar wow left-animation" data-wow-delay="0.2s">
+                    <div class="blog-sidebar wow left-animation mt-5" data-wow-delay="0.2s">
                         <div class="recent-post">
-                            <h3 class="sidebar-title">Berita Terbaru</h3>
+                            <h3 class="sidebar-title mb-4">Berita Terbaru</h3>
 
                             @foreach($kegiatanList as $item)
-                                <div class="recent-post-box">
-                                    <div class="recent-post-img back-img" style="background-image:url({{ asset('storage/berita/'.$item->foto) }})"></div>
-                                    <div class="recent-post-text">
+                                <div class="recent-post-box row">
+                                    <div class="recent-post-img back-img col-4">
+                                        <img src="{{ asset('storage/berita/'.$item->foto) }}" class="img-fluid" alt="{{ $item->judul }}">
+                                    </div>
+                                    <div class="recent-post-text col-8">
                                         <h6><a href="{{ route('landing.detail.kegiatan',['slug' => $item->slug_judul]) }}">{{ $item->judul }}</a></h6>
                                         <p><small><i class="fa fa-calendar" aria-hidden="true"></i><b> {{ date('d M Y',strtotime($item->created_at)) }}</b></small></p>
                                     </div>
