@@ -6,13 +6,10 @@
     <section class="home-hero slide-hero">
         <div class="hero-owl owl-carousel">
             <div class="slide owlbg11">
-                <img src="{{ asset('app-assets/landing-new/images/new_banner/banner1.webp') }}" class="img-fluid">
+                <img src="{{ asset('app-assets/landing-new/images/new_banner/hero1.webp') }}" class="img-fluid">
             </div>
             <div class="slide owlbg11">
-                <img src="{{ asset('app-assets/landing-new/images/new_banner/banner2.webp') }}" class="img-fluid">
-            </div>
-            <div class="slide owlbg11">
-                <img src="{{ asset('app-assets/landing-new/images/new_banner/banner3.webp') }}" class="img-fluid">
+                <img src="{{ asset('app-assets/landing-new/images/new_banner/hero2.webp') }}" class="img-fluid">
             </div>
         </div>
     </section>
