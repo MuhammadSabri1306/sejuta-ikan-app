@@ -5,4 +5,4 @@
 <script src="{{ asset('app-assets/landing-new/js/app.bundle.js') }}"></script>
 <script src="{{ asset('app-assets/landing-new/js/parallax.min.js') }}"></script>
 <!--Common reevan script file-->
-<script src="{{ asset('app-assets/landing-new/js/main.min.js?v=1') }}"></script>
+<script src="{{ asset('app-assets/landing-new/js/main.min.js?v=2') }}"></script>

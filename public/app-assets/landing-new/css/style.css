@@ -3808,3 +3808,16 @@ html body .header-bhv.sticky .mini-header-bar {
   background: #fff;
   transition: all 0.2s ease;
 }
+
+.sop-carousel .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sop-carousel img {
+    width: 70% !important;
+    height: auto;
+    margin-bottom: 1.25rem !important;
+    margin-top: 2rem !important;
+}

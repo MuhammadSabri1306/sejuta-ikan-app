@@ -250,6 +250,18 @@
             smartSpeed: 1500,
             navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
         });
+        $('.sop-carousel').owlCarousel({
+            margin:30,
+            nav:true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            responsive:{
+                0: { items:1 },
+                600: { items:2 },
+                1000: { items:3 }
+            }
+        });
     });
     $(window).on("load", function() {
         $('.app-screenss').owlCarousel({

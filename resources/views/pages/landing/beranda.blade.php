@@ -178,19 +178,90 @@
 
     <section class="r-bg-a sec-pad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-8 vcenter">
-                    <div class="heading-hz-btn">
-                        <h2>Prosedur Pelayanan</h2>
+            <div class="heading-hz-btn">
+                <h2 class="mb-5">Prosedur Pelayanan</h2>
+            </div>
+            <div class="owl-carousel owl-theme sop-carousel">
+                <div class="item">
+                    <div class="card bg-white">
+                        <div class="card-body">
+                            <p><b class="border border-danger text-danger px-2 py-1 rounded-circle">1</b></p>
+                            <img src="{{ asset('app-assets/prosedur/permohonan.svg') }}" alt="">
+                            <h4 class="text-center">Permohonan</h4>
+                            <p class="text-center small px-4 mt-2">Hubungi Whatsapp 0812 4496 2783, atau kunjungi website sejutaikan-bpmpp.info</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-4 vcenter">
+                <div class="item">
+                    <div class="card bg-white">
+                        <div class="card-body">
+                            <p><b class="border border-danger text-danger px-2 py-1 rounded-circle">2</b></p>
+                            <img src="{{ asset('app-assets/prosedur/verifikasi.svg') }}" alt="">
+                            <h4 class="text-center">Verifikasi</h4>
+                            <p class="text-center small px-4 mt-2">dan kaji ulang permohonan uji sampel</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row mt60">
-                <div class="col-md-6 col-12">
-                    <img src="{{ asset('app-assets/landing/assets/images/prosedur.jpeg') }}" alt="sop"
-                        style="filter: drop-shadow(10px 10px 4px #777777); width: 100%;">
+                <div class="item">
+                    <div class="card bg-white">
+                        <div class="card-body">
+                            <p><b class="border border-danger text-danger px-2 py-1 rounded-circle">3</b></p>
+                            <img src="{{ asset('app-assets/prosedur/pembayaran.svg') }}" alt="">
+                            <h4 class="text-center">Pembayaran Retribusi</h4>
+                            <p class="text-center small px-4 mt-2">Kirim bukti pembayaran anda ke 0812 4496 2783 (Whatsapp) atau upload di website sejutaikan-bpmpp.info</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card bg-white">
+                        <div class="card-body">
+                            <p><b class="border border-danger text-danger px-2 py-1 rounded-circle">4</b></p>
+                            <img src="{{ asset('app-assets/prosedur/penjemputan.svg') }}" alt="">
+                            <h4 class="text-center">Penjemputan Sampel</h4>
+                            <p class="text-center small px-4 mt-2">Tunggu kedatangan petugas kami di rumah anda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card bg-white">
+                        <div class="card-body">
+                            <p><b class="border border-danger text-danger px-2 py-1 rounded-circle">5</b></p>
+                            <img src="{{ asset('app-assets/prosedur/pengujian.svg') }}" alt="">
+                            <h4 class="text-center">Pengujian</h4>
+                            <p class="text-center small px-4 mt-2">Sampel akan diuji sesuai parameter dalam permohonan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4 class="mt-4 mb-2">Jenis Pengujian</h4>
+                    <div class="card bg-primary mb-2">
+                        <div class="card-body d-block">
+                            <p class="text-white"><b>Organoleptik</b><br>
+                            <small>(1 hari)</small></p>
+                        </div>
+                    </div>
+                    <div class="card bg-success mb-2">
+                        <div class="card-body d-block">
+                            <p class="text-white"><b>Mikrobiologi</b><br>
+                            <small>(6 hari)</small></p>
+                        </div>
+                    </div>
+                    <div class="card bg-danger">
+                        <div class="card-body d-block">
+                            <p class="text-white"><b>Kimia</b><br>
+                            <small>(6 hari)</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card bg-white">
+                        <div class="card-body">
+                            <p><b class="border border-danger text-danger px-2 py-1 rounded-circle">6</b></p>
+                            <img src="{{ asset('app-assets/prosedur/sertifikat.svg') }}" alt="">
+                            <h4 class="text-center">Penerbitan Sertifikat</h4>
+                            <p class="text-center small px-4 mt-2">Sertifikat hasil ujia akan dikirim ke rumah anda segera setelah hasilnya keluar</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,4 +328,7 @@
             });
         });
     </script>
+<script type="text/javascript">
+
+</script>
 @endsection
